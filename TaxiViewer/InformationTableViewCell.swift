@@ -9,8 +9,8 @@ import UIKit
 
 class InformationTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var gesamt: UILabel!
-    @IBOutlet weak var besetzt: UILabel!
+    @IBOutlet weak var loggedIn: UILabel!
+    @IBOutlet weak var busy: UILabel!
     
     
     override func awakeFromNib() {

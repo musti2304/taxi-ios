@@ -20,6 +20,10 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        HPService.services.infoDelegate = self
+        HPService.services.fetchInformation()
+        print(infoArray)
+        
         infoTableView.delegate = self
         infoTableView.dataSource = self
 
@@ -52,8 +56,8 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "infoCell", for: indexPath) as! InformationTableViewCell
         
-        cell.gesamt.text = infoArray[indexPath.row].gesamt
-        cell.besetzt.text = infoArray[indexPath.row].besetzt
+        cell.loggedIn.text = infoArray[indexPath.row].gesamt
+        cell.busy.text = infoArray[indexPath.row].besetzt
         
         return cell
     }
