@@ -8,10 +8,7 @@
 import Foundation
 import Alamofire
 
-struct Information: Decodable {
-    var besetzt: String
-    var gesamt: String
-}
+/*
 
 struct Halteplatz: Decodable {
     var name: String
@@ -19,7 +16,7 @@ struct Halteplatz: Decodable {
     var einstiege:Int
     var wartezeit:String
 }
-
+*/
 
 class HPService {
     
@@ -33,7 +30,7 @@ class HPService {
             
             let data = String(data: response.data!, encoding: .utf8)
             
-            self.hpDelegate?.updateHalteplaetze(hpNewArray: data!)
+            self.hpDelegate?.updateHalteplaetze(stationsNewArray: data!)
         }
         
     }
@@ -48,7 +45,5 @@ class HPService {
             
         }
     }
-    
-    
     
 }

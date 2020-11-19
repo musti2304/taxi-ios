@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		490732A3256465220024BC12 /* Halteplatz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490732A2256465220024BC12 /* Halteplatz.swift */; };
+		490732A72564687E0024BC12 /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490732A62564687E0024BC12 /* Information.swift */; };
 		4922795C2562E88A00785DEE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4922795B2562E88A00785DEE /* Alamofire */; };
 		4922795F2562E8BA00785DEE /* HPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4922795E2562E8BA00785DEE /* HPService.swift */; };
 		4922796A256304ED00785DEE /* InformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49227969256304ED00785DEE /* InformationTableViewCell.swift */; };
+		496F533A2566EC6F0070A114 /* StationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496F53392566EC6F0070A114 /* StationsTableViewCell.swift */; };
 		497E7FF12562D7AE003A47D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497E7FF02562D7AE003A47D4 /* AppDelegate.swift */; };
 		497E7FF32562D7AE003A47D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497E7FF22562D7AE003A47D4 /* SceneDelegate.swift */; };
 		497E7FF52562D7AE003A47D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497E7FF42562D7AE003A47D4 /* ViewController.swift */; };
@@ -20,8 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		490732A2256465220024BC12 /* Halteplatz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Halteplatz.swift; sourceTree = "<group>"; };
+		490732A62564687E0024BC12 /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
 		4922795E2562E8BA00785DEE /* HPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPService.swift; sourceTree = "<group>"; };
 		49227969256304ED00785DEE /* InformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationTableViewCell.swift; sourceTree = "<group>"; };
+		496F53392566EC6F0070A114 /* StationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsTableViewCell.swift; sourceTree = "<group>"; };
 		497E7FED2562D7AE003A47D4 /* TaxiViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaxiViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		497E7FF02562D7AE003A47D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		497E7FF22562D7AE003A47D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +51,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		496F533C2566FEA10070A114 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4922795E2562E8BA00785DEE /* HPService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		496F533E2566FEB60070A114 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				49227969256304ED00785DEE /* InformationTableViewCell.swift */,
+				496F53392566EC6F0070A114 /* StationsTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		496F533F2566FEDB0070A114 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				497E7FF42562D7AE003A47D4 /* ViewController.swift */,
+				497E80062562DD85003A47D4 /* InformationViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		496F53402566FEEF0070A114 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				490732A2256465220024BC12 /* Halteplatz.swift */,
+				490732A62564687E0024BC12 /* Information.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		497E7FE42562D7AE003A47D4 = {
 			isa = PBXGroup;
 			children = (
@@ -64,16 +105,16 @@
 		497E7FEF2562D7AE003A47D4 /* TaxiViewer */ = {
 			isa = PBXGroup;
 			children = (
+				496F53402566FEEF0070A114 /* Model */,
+				496F533F2566FEDB0070A114 /* Controller */,
+				496F533E2566FEB60070A114 /* Views */,
+				496F533C2566FEA10070A114 /* Service */,
 				497E7FF02562D7AE003A47D4 /* AppDelegate.swift */,
 				497E7FF22562D7AE003A47D4 /* SceneDelegate.swift */,
-				497E7FF42562D7AE003A47D4 /* ViewController.swift */,
-				497E80062562DD85003A47D4 /* InformationViewController.swift */,
 				497E7FF62562D7AE003A47D4 /* Main.storyboard */,
 				497E7FF92562D7B0003A47D4 /* Assets.xcassets */,
 				497E7FFB2562D7B0003A47D4 /* LaunchScreen.storyboard */,
 				497E7FFE2562D7B0003A47D4 /* Info.plist */,
-				4922795E2562E8BA00785DEE /* HPService.swift */,
-				49227969256304ED00785DEE /* InformationTableViewCell.swift */,
 			);
 			path = TaxiViewer;
 			sourceTree = "<group>";
@@ -156,9 +197,12 @@
 			files = (
 				4922796A256304ED00785DEE /* InformationTableViewCell.swift in Sources */,
 				497E7FF52562D7AE003A47D4 /* ViewController.swift in Sources */,
+				490732A72564687E0024BC12 /* Information.swift in Sources */,
 				497E7FF12562D7AE003A47D4 /* AppDelegate.swift in Sources */,
 				497E7FF32562D7AE003A47D4 /* SceneDelegate.swift in Sources */,
 				497E80072562DD85003A47D4 /* InformationViewController.swift in Sources */,
+				496F533A2566EC6F0070A114 /* StationsTableViewCell.swift in Sources */,
+				490732A3256465220024BC12 /* Halteplatz.swift in Sources */,
 				4922795F2562E8BA00785DEE /* HPService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

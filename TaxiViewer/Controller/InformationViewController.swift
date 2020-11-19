@@ -14,19 +14,25 @@ protocol InfoDelegate {
 class InformationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, InfoDelegate {
 
     @IBOutlet weak var infoTableView: UITableView!
+    @IBOutlet weak var updateInfo: UIBarButtonItem!
     
     var infoArray = [Information]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        HPService.services.infoDelegate = self
-        HPService.services.fetchInformation()
-        print(infoArray)
-        
         infoTableView.delegate = self
         infoTableView.dataSource = self
-
+        
+        HPService.services.infoDelegate = self
+        HPService.services.fetchInformation()
+        
+    }
+    
+    // MARK: - Action
+    
+    @IBAction func updateInfo(_ sender: Any) {
+        HPService.services.fetchInformation()
     }
     
     
