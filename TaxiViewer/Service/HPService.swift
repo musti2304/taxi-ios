@@ -8,16 +8,6 @@
 import Foundation
 import Alamofire
 
-/*
-
-struct Halteplatz: Decodable {
-    var name: String
-    var auftraege:Int
-    var einstiege:Int
-    var wartezeit:String
-}
-*/
-
 class HPService {
     
     var hpDelegate: HPDelegate?

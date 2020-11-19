@@ -43,6 +43,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         do {
             
+            // TODO: ask the friendly community ;-)
             let jsonDecoder = JSONDecoder()
             stationsArray = try jsonDecoder.decode([Halteplatz].self, from: stationsNewArray.data(using: .utf8)!)
             
@@ -65,7 +66,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "hpCell", for: indexPath) as! StationsTableViewCell
         
         // TODO: ask the friendly community ;-)
-        // Somehow I can not access
         cell.hpName.text = stationsArray[indexPath.row].name
         cell.auftraege.text = String((stationsArray[indexPath.row].data?.auftraege)!)
         cell.einstiege.text = String((stationsArray[indexPath.row].data?.einstiege)!)
