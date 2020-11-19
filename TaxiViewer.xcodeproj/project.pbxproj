@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		490732A3256465220024BC12 /* Halteplatz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490732A2256465220024BC12 /* Halteplatz.swift */; };
 		490732A72564687E0024BC12 /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490732A62564687E0024BC12 /* Information.swift */; };
 		4922795C2562E88A00785DEE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4922795B2562E88A00785DEE /* Alamofire */; };
 		4922795F2562E8BA00785DEE /* HPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4922795E2562E8BA00785DEE /* HPService.swift */; };
@@ -20,10 +19,12 @@
 		497E7FFA2562D7B0003A47D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 497E7FF92562D7B0003A47D4 /* Assets.xcassets */; };
 		497E7FFD2562D7B0003A47D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 497E7FFB2562D7B0003A47D4 /* LaunchScreen.storyboard */; };
 		497E80072562DD85003A47D4 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497E80062562DD85003A47D4 /* InformationViewController.swift */; };
+		49F3B8C62567072E002EA53C /* Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F3B8C52567072E002EA53C /* Stations.swift */; };
+		49F3B8C925670744002EA53C /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F3B8C825670744002EA53C /* Data.swift */; };
+		49F3B8CD2567094C002EA53C /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F3B8CC2567094C002EA53C /* Root.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		490732A2256465220024BC12 /* Halteplatz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Halteplatz.swift; sourceTree = "<group>"; };
 		490732A62564687E0024BC12 /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
 		4922795E2562E8BA00785DEE /* HPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPService.swift; sourceTree = "<group>"; };
 		49227969256304ED00785DEE /* InformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationTableViewCell.swift; sourceTree = "<group>"; };
@@ -37,6 +38,9 @@
 		497E7FFC2562D7B0003A47D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		497E7FFE2562D7B0003A47D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		497E80062562DD85003A47D4 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		49F3B8C52567072E002EA53C /* Stations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stations.swift; sourceTree = "<group>"; };
+		49F3B8C825670744002EA53C /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		49F3B8CC2567094C002EA53C /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +84,10 @@
 		496F53402566FEEF0070A114 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				490732A2256465220024BC12 /* Halteplatz.swift */,
 				490732A62564687E0024BC12 /* Information.swift */,
+				49F3B8C52567072E002EA53C /* Stations.swift */,
+				49F3B8C825670744002EA53C /* Data.swift */,
+				49F3B8CC2567094C002EA53C /* Root.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -199,10 +205,12 @@
 				497E7FF52562D7AE003A47D4 /* ViewController.swift in Sources */,
 				490732A72564687E0024BC12 /* Information.swift in Sources */,
 				497E7FF12562D7AE003A47D4 /* AppDelegate.swift in Sources */,
+				49F3B8C925670744002EA53C /* Data.swift in Sources */,
 				497E7FF32562D7AE003A47D4 /* SceneDelegate.swift in Sources */,
+				49F3B8CD2567094C002EA53C /* Root.swift in Sources */,
 				497E80072562DD85003A47D4 /* InformationViewController.swift in Sources */,
+				49F3B8C62567072E002EA53C /* Stations.swift in Sources */,
 				496F533A2566EC6F0070A114 /* StationsTableViewCell.swift in Sources */,
-				490732A3256465220024BC12 /* Halteplatz.swift in Sources */,
 				4922795F2562E8BA00785DEE /* HPService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
