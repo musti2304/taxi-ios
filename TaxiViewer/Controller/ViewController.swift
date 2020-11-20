@@ -16,7 +16,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var hpTableView: UITableView!
     @IBOutlet weak var updateHalteplatz: UIBarButtonItem!
     
-    var stationsArray = [Stations]()
+    var stationsArray = [Station]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,16 +25,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         hpTableView.dataSource = self
         
         HPService.services.hpDelegate = self
-        HPService.services.fetchHalteplaetze()
-        print(stationsArray)
-        
+        HPService.services.fetchHalteplaetze()        
     }
     
     // MARK: - Action
     
     @IBAction func updateHP(_ sender: Any) {
         HPService.services.fetchHalteplaetze()
-        print(stationsArray)
     }
     
     // MARK: - HPDelegate Protocol Stubs
@@ -45,7 +42,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             // TODO: ask the friendly community ;-)
             let jsonDecoder = JSONDecoder()
-            stationsArray = try jsonDecoder.decode([Stations].self, from: stationsNewArray.data(using: .utf8)!)
+            let root = try jsonDecoder.decode(Root.self, from: stationsNewArray.data(using: .utf8)!)
+            stationsArray = root.stations
             
         } catch {
             print(error)
@@ -67,9 +65,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         // TODO: ask the friendly community ;-)
         cell.hpName.text = stationsArray[indexPath.row].name
-        //cell.auftraege.text = String((stationsArray[indexPath.row].data?.auftraege)!)
-        //cell.einstiege.text = String((stationsArray[indexPath.row].data?.einstiege)!)
-        //cell.wartezeit.text = stationsArray[indexPath.row].data?.wartezeit
+        cell.auftraege.text = String(stationsArray[indexPath.row].data[0].auftraege ?? 0)
+        cell.einstiege.text = String(stationsArray[indexPath.row].data[0].einstiege ?? 0)
+
+        cell.wartezeit.text = stationsArray[indexPath.row].data[0].wartezeit ?? "-"
         
         return cell
     }

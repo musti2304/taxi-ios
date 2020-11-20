@@ -7,17 +7,8 @@
 
 import Foundation
 
-struct Root: Decodable {
+struct Root:Decodable {
     
-    let stations: [Stations]?
-    
-    enum CodingKeys: String, CodingKey {
-        case stations = "stations"
-    }
-    
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        stations = try values.decodeIfPresent([Stations].self, forKey: .stations)
-    }
+    let stations: [Station]
 
 }
