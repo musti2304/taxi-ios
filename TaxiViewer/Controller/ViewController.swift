@@ -25,13 +25,25 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         hpTableView.dataSource = self
         
         HPService.services.hpDelegate = self
-        HPService.services.fetchHalteplaetze()        
+        HPService.services.fetchHalteplaetze()
+        print(stationsArray)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        HPService.services.fetchHalteplaetze()
+        print(stationsArray)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        HPService.services.fetchHalteplaetze()
+        print(stationsArray)
     }
     
     // MARK: - Action
     
     @IBAction func updateHP(_ sender: Any) {
         HPService.services.fetchHalteplaetze()
+        print(stationsArray)
     }
     
     // MARK: - HPDelegate Protocol Stubs
@@ -40,7 +52,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         do {
             
-            // TODO: ask the friendly community ;-)
             let jsonDecoder = JSONDecoder()
             let root = try jsonDecoder.decode(Root.self, from: stationsNewArray.data(using: .utf8)!)
             stationsArray = root.stations
@@ -63,11 +74,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "hpCell", for: indexPath) as! StationsTableViewCell
         
-        // TODO: ask the friendly community ;-)
         cell.hpName.text = stationsArray[indexPath.row].name
         cell.auftraege.text = String(stationsArray[indexPath.row].data[0].auftraege ?? 0)
         cell.einstiege.text = String(stationsArray[indexPath.row].data[0].einstiege ?? 0)
-
         cell.wartezeit.text = stationsArray[indexPath.row].data[0].wartezeit ?? "-"
         
         return cell
